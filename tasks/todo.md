@@ -13,14 +13,14 @@ Every task also clears the Definition of Done in `tasks/plan.md`.
 **Description:** Transcribe the 10 restaurants from the brief into a JSON file, define the domain types, and expose a typed loader plus the derived filter option lists. Nothing renders yet — this is the foundation every later task reads from.
 
 **Acceptance criteria:**
-- [ ] `src/data/restaurants.json` contains all 10 records verbatim from the brief, including `generatedFor`, `date`, and `currency`
-- [ ] `Restaurant`, `FirstTable`, and `PartySize` types match the JSON shape exactly, with no `any`
-- [ ] `getRestaurants()`, `getCuisines()`, and `getSuburbs()` are exported; the option lists are deduplicated and sorted
+- [x] `src/data/restaurants.json` contains all 10 records verbatim from the brief, including `generatedFor`, `date`, and `currency`
+- [x] `Restaurant`, `FirstTable`, and `PartySize` types match the JSON shape exactly, with no `any`
+- [x] `getRestaurants()`, `getCuisines()`, and `getSuburbs()` are exported; the option lists are deduplicated and sorted
 
 **Verification:**
-- [ ] Build succeeds: `npm run build`
-- [ ] Lint succeeds: `npm run lint`
-- [ ] Manual check: the JSON has exactly 10 entries with ids 101–110, and rating/reviewsCount/bookingFee values match the brief
+- [x] Build succeeds: `npm run build`
+- [x] Lint succeeds: `npm run lint`
+- [x] Manual check: the JSON has exactly 10 entries with ids 101–110, and rating/reviewsCount/bookingFee values match the brief
 
 **Dependencies:** None
 

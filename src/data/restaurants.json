@@ -1,0 +1,197 @@
+{
+  "generatedFor": "First Table engineering exercise",
+  "date": "tonight",
+  "currency": "NZD",
+  "restaurants": [
+    {
+      "id": 101,
+      "name": "The Remarkable Fork",
+      "cuisine": "Modern NZ",
+      "suburb": "Queenstown Central",
+      "address": "12 Ballarat Street",
+      "rating": 4.6,
+      "reviewsCount": 312,
+      "priceLevel": "$$$",
+      "firstTable": {
+        "time": "17:30",
+        "partySize": {
+          "min": 2,
+          "max": 4
+        },
+        "discount": "50% off the food bill",
+        "bookingFee": 20
+      }
+    },
+    {
+      "id": 102,
+      "name": "Shotover Smokehouse",
+      "cuisine": "BBQ",
+      "suburb": "Arthurs Point",
+      "address": "3 Gorge Road",
+      "rating": 4.4,
+      "reviewsCount": 187,
+      "priceLevel": "$$",
+      "firstTable": {
+        "time": "17:00",
+        "partySize": {
+          "min": 2,
+          "max": 6
+        },
+        "discount": "50% off the food bill",
+        "bookingFee": 15
+      }
+    },
+    {
+      "id": 103,
+      "name": "Lakeview Ramen Co.",
+      "cuisine": "Japanese",
+      "suburb": "Queenstown Central",
+      "address": "45 Beach Street",
+      "rating": 4.7,
+      "reviewsCount": 429,
+      "priceLevel": "$$",
+      "firstTable": {
+        "time": "17:15",
+        "partySize": {
+          "min": 2,
+          "max": 4
+        },
+        "discount": "50% off the food bill",
+        "bookingFee": 15
+      }
+    },
+    {
+      "id": 104,
+      "name": "Coronet Cantina",
+      "cuisine": "Mexican",
+      "suburb": "Frankton",
+      "address": "8 Grant Road",
+      "rating": 4.2,
+      "reviewsCount": 156,
+      "priceLevel": "$$",
+      "firstTable": {
+        "time": "17:45",
+        "partySize": {
+          "min": 2,
+          "max": 4
+        },
+        "discount": "50% off the food bill",
+        "bookingFee": 15
+      }
+    },
+    {
+      "id": 105,
+      "name": "Arrowtown Alpine Bistro",
+      "cuisine": "French",
+      "suburb": "Arrowtown",
+      "address": "22 Buckingham Street",
+      "rating": 4.8,
+      "reviewsCount": 264,
+      "priceLevel": "$$$",
+      "firstTable": {
+        "time": "18:00",
+        "partySize": {
+          "min": 2,
+          "max": 2
+        },
+        "discount": "50% off the food bill",
+        "bookingFee": 20
+      }
+    },
+    {
+      "id": 106,
+      "name": "Wakatipu Wok",
+      "cuisine": "Thai",
+      "suburb": "Fernhill",
+      "address": "5 Wakatipu Heights Road",
+      "rating": 4.3,
+      "reviewsCount": 98,
+      "priceLevel": "$",
+      "firstTable": {
+        "time": "17:00",
+        "partySize": {
+          "min": 2,
+          "max": 4
+        },
+        "discount": "50% off the food bill",
+        "bookingFee": 10
+      }
+    },
+    {
+      "id": 107,
+      "name": "The Gondola Grill",
+      "cuisine": "Steakhouse",
+      "suburb": "Queenstown Central",
+      "address": "60 Brecon Street",
+      "rating": 4.5,
+      "reviewsCount": 341,
+      "priceLevel": "$$$$",
+      "firstTable": {
+        "time": "18:00",
+        "partySize": {
+          "min": 2,
+          "max": 4
+        },
+        "discount": "50% off the food bill",
+        "bookingFee": 25
+      }
+    },
+    {
+      "id": 108,
+      "name": "Kelvin Heights Trattoria",
+      "cuisine": "Italian",
+      "suburb": "Kelvin Heights",
+      "address": "14 Peninsula Road",
+      "rating": 4.6,
+      "reviewsCount": 203,
+      "priceLevel": "$$$",
+      "firstTable": {
+        "time": "17:30",
+        "partySize": {
+          "min": 2,
+          "max": 6
+        },
+        "discount": "50% off the food bill",
+        "bookingFee": 20
+      }
+    },
+    {
+      "id": 109,
+      "name": "Moke Lake Mezze",
+      "cuisine": "Middle Eastern",
+      "suburb": "Frankton",
+      "address": "31 Hawthorne Drive",
+      "rating": 4.4,
+      "reviewsCount": 122,
+      "priceLevel": "$$",
+      "firstTable": {
+        "time": "17:15",
+        "partySize": {
+          "min": 2,
+          "max": 4
+        },
+        "discount": "50% off the food bill",
+        "bookingFee": 15
+      }
+    },
+    {
+      "id": 110,
+      "name": "Bob's Peak Brewhouse",
+      "cuisine": "Gastropub",
+      "suburb": "Queenstown Central",
+      "address": "9 Camp Street",
+      "rating": 4.1,
+      "reviewsCount": 275,
+      "priceLevel": "$$",
+      "firstTable": {
+        "time": "17:45",
+        "partySize": {
+          "min": 2,
+          "max": 8
+        },
+        "discount": "50% off the food bill",
+        "bookingFee": 15
+      }
+    }
+  ]
+}
