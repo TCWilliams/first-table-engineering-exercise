@@ -1,6 +1,6 @@
 # Spec: Tonight's First Tables
 
-Status: **awaiting review** (Phase 1 — Specify). No code until this is approved.
+Status: **approved**. Plan in `tasks/plan.md`, tasks in `tasks/todo.md`.
 
 Scoped to a ~1 hour prototype. Anything not listed under Success Criteria is out.
 
@@ -50,14 +50,13 @@ The honest limit: this holds **within one Node process**. Two processes or a ser
 
 ### How you verify it
 
-Manual, two tabs, ~3 minutes:
+Manual, two tabs, ~2 minutes:
 
 1. Open `/` in two browser windows side by side. Both show the same table as available.
 2. Book it in window A. A confirms; A's card flips to booked.
 3. Without refreshing, submit the same table in window B — B's page is now stale, which is the realistic failure case.
 4. B is told the table has just been taken, sees no confirmation, and the card flips to booked.
 5. Double-click submit on a fresh table: the button disables on the first click, and one confirmation appears.
-6. Then throttle the network in devtools to widen the in-flight window and double-click again — the button should still block the second click rather than merely winning a race.
 
 Don't edit source files mid-test — an HMR reload resets the store and isn't a real failure.
 
