@@ -161,7 +161,7 @@ Every task also clears the Definition of Done in `tasks/plan.md`.
 **Verification:**
 - [x] Build succeeds: `npm run build`
 - [x] Lint succeeds: `npm run lint`
-- [ ] Manual check: restart the dev server, then run all five steps of the two-tab walkthrough in `SPEC.md`; hard-refresh both windows afterwards and confirm the table is still booked — **awaiting human; this is Checkpoint C**
+- [x] Manual check: restart the dev server, then run all five steps of the two-tab walkthrough in `SPEC.md`; hard-refresh both windows afterwards and confirm the table is still booked — **verified by human**
 
 **Dependencies:** Task 5
 
@@ -174,39 +174,33 @@ Every task also clears the Definition of Done in `tasks/plan.md`.
 
 ---
 
-### Checkpoint C: The Guard — human review gate
-- [ ] `claimFirstTable` read line by line: no `await` between check and write
-- [ ] No code path writes a booking except through `claimFirstTable`
-- [ ] Dev server restarted, then the full five-step two-tab walkthrough passes
-- [ ] Booked state survives a hard refresh
-- [ ] Blank name and malformed email both rejected server-side, no booking created
-- [ ] `npm run build` clean
-- [ ] **Stop here for human review before Phase 4**
+### Checkpoint C: The Guard — human review gate — **PASSED**
+- [x] `claimFirstTable` read line by line: no `await` between check and write
+- [x] No code path writes a booking except through `claimFirstTable` — `rg` finds one `bookings.set` in `src/`
+- [x] Dev server restarted, then the full five-step two-tab walkthrough passes — steps 1–4 verified at this checkpoint, step 5 (double-click) verified during Task 5
+- [x] Booked state survives a hard refresh
+- [x] Blank name and malformed email both rejected server-side, no booking created — verified during Task 5
+- [x] `npm run build` clean
+- [x] **Stop here for human review before Phase 4**
 
 ---
 
 ## Phase 4: Close-out
 
-## Task 7: Polish
+## Task 7: Polish — **CUT (time)**
+
+Cut by decision after Checkpoint C passed, which is the cut order the plan specified. No behaviour is affected: a booked card still replaces its form with "This first table is already booked", it just isn't styled to read as booked at a glance. Carried into `SPEC.md` Deferred.
 
 **Description:** First thing cut if the hour is gone. Visual tidy-up only — no new behaviour, nothing from the Deferred list.
 
 **Acceptance criteria:**
-- [ ] Booked cards are visually distinct at a glance, not just missing a button
-- [ ] Layout is coherent on a narrow viewport
-- [ ] Filter controls, match count, and empty state are visually consistent with the cards
-
-**Verification:**
-- [ ] Build succeeds: `npm run build`
-- [ ] Lint succeeds: `npm run lint`
-- [ ] Manual check: load `/` at 375px and at desktop width; confirm nothing overflows and booked cards read as booked without hunting
+- [ ] ~~Booked cards are visually distinct at a glance, not just missing a button~~
+- [ ] ~~Layout is coherent on a narrow viewport~~
+- [ ] ~~Filter controls, match count, and empty state are visually consistent with the cards~~
 
 **Dependencies:** Task 6
 
-**Files likely touched:**
-- `src/components/RestaurantCard.tsx`
-- `src/components/RestaurantBrowser.tsx`
-- `src/app/globals.css`
+**Files touched:** none — cut
 
 **Estimated scope:** Small (3 files, ~5 min)
 
@@ -224,7 +218,7 @@ Every task also clears the Definition of Done in `tasks/plan.md`.
 **Verification:**
 - [ ] Manual check: every one of the nine Success Criteria in `SPEC.md` is either demonstrably met or explicitly named as cut in the reflection
 
-**Dependencies:** Task 7
+**Dependencies:** Task 6 (Task 7 cut)
 
 **Files likely touched:**
 - `REFLECTION.md`

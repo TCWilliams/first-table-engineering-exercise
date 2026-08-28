@@ -59,7 +59,7 @@ Full acceptance criteria, verification steps, and file lists live in `tasks/todo
 ### Checkpoint C: The Guard — the one that matters
 
 ### Phase 4: Close-out
-- Task 7: Polish
+- Task 7: Polish — **cut for time after Checkpoint C passed**
 - Task 8: Reflection and spec reconciliation
 
 ### Checkpoint D: Complete
