@@ -37,14 +37,14 @@ Every task also clears the Definition of Done in `tasks/plan.md`.
 **Description:** Replace the create-next-app boilerplate with the real page: a Server Component that loads restaurants and renders them as a card grid. No filtering, no booking — just the full list, correct and readable.
 
 **Acceptance criteria:**
-- [ ] `/` renders all 10 restaurants as cards showing name, cuisine, suburb, rating, review count, price level, first-table time, party size range, discount, and booking fee (Success Criterion 1)
-- [ ] Booking fee renders as NZD currency; party size renders as a range, collapsing to a single value when min equals max (id 105 is min 2 / max 2)
-- [ ] All boilerplate is gone — no Next.js logo, no template copy — and page metadata says something real instead of "Create Next App"
+- [x] `/` renders all 10 restaurants as cards showing name, cuisine, suburb, rating, review count, price level, first-table time, party size range, discount, and booking fee (Success Criterion 1)
+- [x] Booking fee renders as NZD currency; party size renders as a range, collapsing to a single value when min equals max (id 105 is min 2 / max 2)
+- [x] All boilerplate is gone — no Next.js logo, no template copy — and page metadata says something real instead of "Create Next App"
 
 **Verification:**
-- [ ] Build succeeds: `npm run build`
-- [ ] Lint succeeds: `npm run lint`
-- [ ] Manual check: `npm run dev`, load `/`, count 10 cards and spot-check "Arrowtown Alpine Bistro" against the brief field by field
+- [x] Build succeeds: `npm run build`
+- [x] Lint succeeds: `npm run lint`
+- [x] Manual check: `npm run dev`, load `/`, count 10 cards and spot-check "Arrowtown Alpine Bistro" against the brief field by field
 
 **Dependencies:** Task 1
 
@@ -58,9 +58,9 @@ Every task also clears the Definition of Done in `tasks/plan.md`.
 ---
 
 ### Checkpoint A: Browse
-- [ ] `npm run build` and `npm run lint` both clean
-- [ ] All 10 restaurants render with every required field
-- [ ] No boilerplate remains
+- [x] `npm run build` and `npm run lint` both clean
+- [x] All 10 restaurants render with every required field
+- [x] No boilerplate remains
 
 ---
 
@@ -71,14 +71,14 @@ Every task also clears the Definition of Done in `tasks/plan.md`.
 **Description:** Add a client component owning the filter state, with two selects driven by the derived option lists. Cards move inside it. Includes the match count and the empty state, both of which are on the cut list if time runs short.
 
 **Acceptance criteria:**
-- [ ] Cuisine and suburb selects both default to "All", derive options from the data, and combine as AND (Success Criterion 2)
-- [ ] A match count reflects the filtered result
-- [ ] A combination matching nothing shows an empty state with a way back to unfiltered, not a blank grid
+- [x] Cuisine and suburb selects both default to "All", derive options from the data, and combine as AND (Success Criterion 2)
+- [x] A match count reflects the filtered result
+- [x] A combination matching nothing shows an empty state with a way back to unfiltered, not a blank grid
 
 **Verification:**
-- [ ] Build succeeds: `npm run build`
-- [ ] Lint succeeds: `npm run lint`
-- [ ] Manual check: cuisine "Japanese" alone gives 1 (Lakeview Ramen Co.); suburb "Queenstown Central" alone gives 4; "Japanese" + "Frankton" together gives 0 and shows the empty state
+- [x] Build succeeds: `npm run build`
+- [x] Lint succeeds: `npm run lint`
+- [ ] Manual check: cuisine "Japanese" alone gives 1 (Lakeview Ramen Co.); suburb "Queenstown Central" alone gives 4; "Japanese" + "Frankton" together gives 0 and shows the empty state — **awaiting human click-through; expected counts confirmed against the data**
 
 **Dependencies:** Task 2
 
@@ -106,14 +106,14 @@ Every task also clears the Definition of Done in `tasks/plan.md`.
 **Description:** The heart of the hard requirement. A `globalThis`-pinned store holding bookings by restaurant id, with a single synchronous mutating function. No UI, no Server Action — just the module. Written once, correctly, because the guard is structural rather than something layered on afterwards.
 
 **Acceptance criteria:**
-- [ ] `claimFirstTable(restaurantId, diner)` is a plain non-`async` function with **no `await` between the availability check and the write**, carrying the comment explaining why
-- [ ] It returns the `ClaimResult` discriminated union from `SPEC.md`, covering `already_booked`, `unknown_restaurant`, and `invalid_details`
-- [ ] The store is pinned to `globalThis` so it survives HMR, and an availability reader is exported for the page
+- [x] `claimFirstTable(restaurantId, diner)` is a plain non-`async` function with **no `await` between the availability check and the write**, carrying the comment explaining why
+- [x] It returns the `ClaimResult` discriminated union from `SPEC.md`, covering `already_booked`, `unknown_restaurant`, and `invalid_details`
+- [x] The store is pinned to `globalThis` so it survives HMR, and an availability reader is exported for the page
 
 **Verification:**
-- [ ] Build succeeds: `npm run build`
-- [ ] Lint succeeds: `npm run lint`
-- [ ] Manual check: read the function top to bottom and confirm the check and the write sit in one unbroken synchronous run; confirm `claimFirstTable` is the only exported function that mutates state
+- [x] Build succeeds: `npm run build`
+- [x] Lint succeeds: `npm run lint`
+- [x] Manual check: read the function top to bottom and confirm the check and the write sit in one unbroken synchronous run; confirm `claimFirstTable` is the only exported function that mutates state
 
 **Dependencies:** Task 1
 

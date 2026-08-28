@@ -24,6 +24,11 @@ export type Restaurant = {
   firstTable: FirstTable;
 };
 
+export type RestaurantFilters = {
+  cuisine: string;
+  suburb: string;
+};
+
 const restaurants: Restaurant[] = data.restaurants;
 
 function sortedUnique(values: string[]): string[] {
@@ -40,4 +45,17 @@ export function getCuisines(): string[] {
 
 export function getSuburbs(): string[] {
   return sortedUnique(restaurants.map((restaurant) => restaurant.suburb));
+}
+
+// An empty filter value means "no filter applied". Using "" rather than a label
+// like "All" keeps the sentinel from ever colliding with a real cuisine or suburb.
+export function filterRestaurants(
+  list: Restaurant[],
+  { cuisine, suburb }: RestaurantFilters,
+): Restaurant[] {
+  return list.filter(
+    (restaurant) =>
+      (cuisine === "" || restaurant.cuisine === cuisine) &&
+      (suburb === "" || restaurant.suburb === suburb),
+  );
 }
