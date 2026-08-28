@@ -13,12 +13,14 @@ type RestaurantBrowserProps = {
   restaurants: Restaurant[];
   cuisines: string[];
   suburbs: string[];
+  bookedRestaurantIds: number[];
 };
 
 export function RestaurantBrowser({
   restaurants,
   cuisines,
   suburbs,
+  bookedRestaurantIds,
 }: RestaurantBrowserProps) {
   const [cuisine, setCuisine] = useState("");
   const [suburb, setSuburb] = useState("");
@@ -100,7 +102,10 @@ export function RestaurantBrowser({
         <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {matches.map((restaurant) => (
             <li key={restaurant.id}>
-              <RestaurantCard restaurant={restaurant} />
+              <RestaurantCard
+                restaurant={restaurant}
+                isBooked={bookedRestaurantIds.includes(restaurant.id)}
+              />
             </li>
           ))}
         </ul>

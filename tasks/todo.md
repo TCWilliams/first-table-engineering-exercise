@@ -129,14 +129,14 @@ Every task also clears the Definition of Done in `tasks/plan.md`.
 **Description:** Wire the Server Action to the card. A diner enters name and email, submits, and sees a confirmation. Server-side validation included; the rejection paths are Task 6.
 
 **Acceptance criteria:**
-- [ ] Submitting a valid name and email books the table and shows an inline confirmation naming the restaurant and time, with no full page reload (Success Criterion 3)
-- [ ] The submit button is disabled while the action is in flight, via `pending` from `useActionState` (Success Criterion 5)
-- [ ] Blank name or malformed email is rejected server-side with a visible message and creates no booking (Success Criterion 7)
+- [x] Submitting a valid name and email books the table and shows an inline confirmation naming the restaurant and time, with no full page reload (Success Criterion 3)
+- [x] The submit button is disabled while the action is in flight, via `pending` from `useActionState` (Success Criterion 5)
+- [x] Blank name or malformed email is rejected server-side with a visible message and creates no booking (Success Criterion 7)
 
 **Verification:**
-- [ ] Build succeeds: `npm run build`
-- [ ] Lint succeeds: `npm run lint`
-- [ ] Manual check: book "Wakatipu Wok", confirm the message names the restaurant and 17:00; submit a blank name and a malformed email and confirm both are refused; double-click submit on a fresh table and confirm only one confirmation appears
+- [x] Build succeeds: `npm run build`
+- [x] Lint succeeds: `npm run lint`
+- [x] Manual check: book "Wakatipu Wok", confirm the message names the restaurant and 17:00; submit a blank name and a malformed email and confirm both are refused; double-click submit on a fresh table and confirm only one confirmation appears — **verified by human; claim succeeds and a repeat attempt is rejected server-side**
 
 **Dependencies:** Tasks 3, 4
 
@@ -154,14 +154,14 @@ Every task also clears the Definition of Done in `tasks/plan.md`.
 **Description:** The rule is already enforced by Task 4 — this task makes it visible. Availability flows into the page, booked cards render as unavailable, a rejected claim shows a human message, and the page refreshes after a successful claim so nobody sees stale availability.
 
 **Acceptance criteria:**
-- [ ] A booked table renders unavailable in the same interaction, without a manual refresh (Success Criterion 4)
-- [ ] An attempt on an already-taken table from a stale page shows a clear "just been taken" message, never a confirmation, and flips the card to booked (Success Criterion 6)
-- [ ] The page renders dynamically, so a booked table is still booked after a hard refresh
+- [x] A booked table renders unavailable in the same interaction, without a manual refresh (Success Criterion 4)
+- [x] An attempt on an already-taken table from a stale page shows a clear "just been taken" message, never a confirmation, and flips the card to booked (Success Criterion 6)
+- [x] The page renders dynamically, so a booked table is still booked after a hard refresh — build output reports `ƒ /` (dynamic) rather than `○ /` (static)
 
 **Verification:**
-- [ ] Build succeeds: `npm run build`
-- [ ] Lint succeeds: `npm run lint`
-- [ ] Manual check: restart the dev server, then run all five steps of the two-tab walkthrough in `SPEC.md`; hard-refresh both windows afterwards and confirm the table is still booked
+- [x] Build succeeds: `npm run build`
+- [x] Lint succeeds: `npm run lint`
+- [ ] Manual check: restart the dev server, then run all five steps of the two-tab walkthrough in `SPEC.md`; hard-refresh both windows afterwards and confirm the table is still booked — **awaiting human; this is Checkpoint C**
 
 **Dependencies:** Task 5
 

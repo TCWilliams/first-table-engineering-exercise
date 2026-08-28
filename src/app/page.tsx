@@ -1,5 +1,10 @@
 import { RestaurantBrowser } from "@/components/RestaurantBrowser";
+import { getBookedRestaurantIds } from "@/lib/bookings/store";
 import { getCuisines, getRestaurants, getSuburbs } from "@/lib/restaurants";
+
+// Availability lives in memory and changes on every booking. Without this the page
+// is prerendered at build time and would keep serving tables that are already gone.
+export const dynamic = "force-dynamic";
 
 export default function Home() {
   return (
@@ -17,6 +22,7 @@ export default function Home() {
         restaurants={getRestaurants()}
         cuisines={getCuisines()}
         suburbs={getSuburbs()}
+        bookedRestaurantIds={getBookedRestaurantIds()}
       />
     </main>
   );
