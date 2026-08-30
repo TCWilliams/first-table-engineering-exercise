@@ -211,12 +211,12 @@ Cut by decision after Checkpoint C passed, which is the cut order the plan speci
 **Description:** Write the reflection the brief asks for, and reconcile the spec with what was actually built so the two don't drift.
 
 **Acceptance criteria:**
-- [ ] `REFLECTION.md` covers what to do next with more time, where the agent went wrong and the response, and what was written or fixed by hand (5–10 sentences per the brief)
-- [ ] It states the concurrency argument and its one-process limit, plus the database `UNIQUE` constraint as the production answer
-- [ ] `SPEC.md` status line no longer says "awaiting review", and anything built differently from the spec is reconciled
+- [x] `REFLECTION.md` covers what to do next with more time, where the agent went wrong and the response, and what was written or fixed by hand (5–10 sentences per the brief)
+- [x] It states the concurrency argument and its one-process limit, plus the database `UNIQUE` constraint as the production answer
+- [x] `SPEC.md` status line no longer says "awaiting review", and anything built differently from the spec is reconciled
 
 **Verification:**
-- [ ] Manual check: every one of the nine Success Criteria in `SPEC.md` is either demonstrably met or explicitly named as cut in the reflection
+- [x] Manual check: every one of the nine Success Criteria in `SPEC.md` is either demonstrably met or explicitly named as cut in the reflection
 
 **Dependencies:** Task 6 (Task 7 cut)
 
@@ -229,10 +229,10 @@ Cut by decision after Checkpoint C passed, which is the cut order the plan speci
 ---
 
 ### Checkpoint D: Complete
-- [ ] All nine Success Criteria met or explicitly named as cut
-- [ ] `npm run build` and `npm run lint` clean
-- [ ] `REFLECTION.md` written
-- [ ] `SPEC.md` reconciled
+- [x] All nine Success Criteria met or explicitly named as cut
+- [x] `npm run build` and `npm run lint` clean
+- [x] `REFLECTION.md` written
+- [x] `SPEC.md` reconciled
 
 ---
 

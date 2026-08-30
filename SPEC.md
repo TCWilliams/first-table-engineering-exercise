@@ -1,6 +1,6 @@
 # Spec: Tonight's First Tables
 
-Status: **approved**. Plan in `tasks/plan.md`, tasks in `tasks/todo.md`.
+Status: **built**. Plan in `tasks/plan.md`, tasks in `tasks/todo.md`, write-up in `REFLECTION.md`. Tasks 1–6 delivered; Task 7 (polish) cut for time. All nine Success Criteria met — see the notes under that heading.
 
 Scoped to a ~1 hour prototype. Anything not listed under Success Criteria is out.
 
@@ -122,19 +122,23 @@ export function claimFirstTable(restaurantId: number, diner: Diner): ClaimResult
 
 ## Success Criteria
 
-1. `/` lists all 10 first tables with name, cuisine, suburb, rating, review count, price level, time, party size range, discount, and booking fee.
-2. Cuisine and suburb filters combine, default to "All", derive options from the data, and show a match count; an empty result shows an empty state.
-3. Submitting name + email books a table and shows a confirmation naming the restaurant and time, with no full page reload.
-4. A booked table renders unavailable in the same interaction, no manual refresh.
-5. The submit button disables while a booking is in flight, so a double-click sends one request.
-6. A second attempt on a taken table from a stale page is rejected server-side with a clear message and never a second confirmation — independently of criterion 5.
-7. Blank name or malformed email is rejected server-side with a visible message and creates no booking.
-8. `npm run build` passes clean.
-9. The two-tab walkthrough above passes.
+All met. Outcome noted against each.
+
+1. `/` lists all 10 first tables with name, cuisine, suburb, rating, review count, price level, time, party size range, discount, and booking fee. — **Met.** Every field cross-checked against the brief.
+2. Cuisine and suburb filters combine, default to "All", derive options from the data, and show a match count; an empty result shows an empty state. — **Met**, with a caveat: verified by inspecting the served HTML (11 cuisine options, 7 suburb options, correct counts) rather than by a human click-through. Filtering is the one criterion never exercised interactively.
+3. Submitting name + email books a table and shows a confirmation naming the restaurant and time, with no full page reload. — **Met**, verified by hand.
+4. A booked table renders unavailable in the same interaction, no manual refresh. — **Met**, verified by hand.
+5. The submit button disables while a booking is in flight, so a double-click sends one request. — **Met.** Checked without network throttling, so this is weaker evidence than intended; the server guard covers the case regardless.
+6. A second attempt on a taken table from a stale page is rejected server-side with a clear message and never a second confirmation — independently of criterion 5. — **Met**, verified by hand in the two-tab walkthrough.
+7. Blank name or malformed email is rejected server-side with a visible message and creates no booking. — **Met.** Forms carry `noValidate` so browser validation can't mask the server check.
+8. `npm run build` passes clean. — **Met.** Route table reports `ƒ /`, confirming the page is dynamic rather than statically prerendered.
+9. The two-tab walkthrough above passes. — **Met**, verified by hand including a hard refresh in both windows.
 
 ## Deferred
 
 Cut deliberately, listed so it reads as a decision: durable persistence and the database unique constraint; automated tests of any kind; a `POST /api/bookings` handler for shell-based race testing (~5 min if you later want to run the race yourself); filter state in the URL; party-size selection; per-restaurant pages; sort controls; accessibility audit; cancelling a booking; optimistic UI.
+
+**Cut during the build:** visual polish (Task 7) — booked cards read as booked because their form is replaced by "This first table is already booked", but they aren't styled to stand out at a glance, and the narrow-viewport layout is unreviewed. Dropped after Checkpoint C passed, which is the cut order this spec set out in advance.
 
 ## Time Estimate
 
@@ -151,8 +155,10 @@ Cut deliberately, listed so it reads as a decision: durable persistence and the 
 
 **Total ~65 min**, realistically 55–75. The guard is nearly free once the store exists — its cost is in the design, which this spec has already paid. If time runs short, polish goes first, then the filter's match count and empty state; the guard and reflection do not get cut.
 
-## Open Questions
+**Outcome:** ran over. Polish was cut as planned; the guard and reflection were kept. The estimate held for the build itself — what it didn't account for was the review-and-revise cycle between slices, which is where the extra time went.
 
-1. **Restart behaviour** — bookings vanish on restart. Acceptable?
-2. **Confirmation placement** — inline on the card (assumed, faster) or a modal?
-3. **Stop-point** — if the hour runs out mid-polish, I stop and write the reflection. Confirm.
+## Resolved Questions
+
+1. **Restart behaviour** — bookings vanish on restart. Accepted for the prototype.
+2. **Confirmation placement** — inline on the card.
+3. **Stop-point** — confirmed; polish cut at the hour, reflection written.
