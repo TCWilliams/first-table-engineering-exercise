@@ -131,7 +131,7 @@ Follow planning-and-task-breakdown. SPEC.md is approved. Do not write any code.
 Read SPEC.md and the current Next.js app (src/app, package.json). Produce:
 
 1. tasks/plan.md: Show dependency graph , break work into testable blocks , flag risks, set verification checkpoints
-2. tasks/todo.md — ordered tasks, each with acceptance criteria, verification, and expected files
+2. tasks/todo.md - ordered tasks, each with acceptance criteria, verification, and expected files
 
 ---
 
