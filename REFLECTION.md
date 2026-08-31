@@ -4,6 +4,7 @@ With more time I would:
 - Change is where the uniqueness guarantee lives. The current guard runs in memory in a single Node process and only persists while the server is alive, so I'd move it into a database  
 - I would add automated testing. Manual testing against a written-down process was appropriate for the rapid prototype nature of this project.
 - UI polish and styling, which was the first thing I cut when I ran over, following the cut order agreed with the agent before starting.
+- I would use additional agent skills to refine and review code.
 
 Where the agent 'failed': 
 - Scope: Its first spec was well beyond a one-hour rapid prototype: a test framework, two test files and an extra API route I hadn't asked for, plus verification steps I wouldn't have time to run. I had it cut all of that, re-estimate, and break the work into ordered tasks with the low-value ones explicitly marked as cuttable. 
